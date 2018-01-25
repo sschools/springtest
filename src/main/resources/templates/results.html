@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Results</title>
+</head>
+<body>
+    <h3>Results Page</h3>
+    <h4>Your First Number: <span th:text="${sample.getValue1()}"></span> </h4>
+    <h4>Your Second Number: <span th:text="${sample.getValue2()}"></span> </h4>
+    <h4>First squared: <span th:text="${sample.square(sample.getValue1())}"</h4>
+</body>
+</html>
