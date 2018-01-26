@@ -1,6 +1,8 @@
 package com.example.springtest.Controller;
 
+import com.example.springtest.Model.Calcs;
 import com.example.springtest.Model.Sample;
+import com.example.springtest.Model.SetVals;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +24,11 @@ public class DemoController {
 
     @RequestMapping(path = "/index", method = RequestMethod.POST)
     public String results(@RequestParam(value="num1") int num1, @RequestParam(value="num2") int num2, Model model) {
-        Sample sample = new Sample();
-        sample.setValue1(num1);
-        sample.setValue2(num2);
-        model.addAttribute("sample", sample);
+        SetVals setVals = new SetVals();
+        Sample sample1 = setVals.res(num1);
+        Sample sample2 = setVals.res(num2);
+        model.addAttribute("sample1", sample1);
+        model.addAttribute("sample2", sample2);
         return "results";
     }
 }

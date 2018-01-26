@@ -6,8 +6,13 @@
 </head>
 <body>
     <h3>Results Page</h3>
-    <h4>Your First Number: <span th:text="${sample.getValue1()}"></span> </h4>
-    <h4>Your Second Number: <span th:text="${sample.getValue2()}"></span> </h4>
-    <h4>First squared: <span th:text="${sample.square(sample.getValue1())}"</h4>
+    <h4>Your First Number: <span th:text="${sample1.getValue()}"></span> </h4>
+    <h4>Your Second Number: <span th:text="${sample2.getValue()}"></span> </h4>
+    <h4>First squared: <span th:text="${sample1.getS()}"></span></h4>
+    <h4>Second squared: <span th:text="${sample2.s}"></span></h4>
+    <h4><span th:text="${sample1.value}"></span> proper divisors: <span th:text="${sample1.divsProp}"></span></h4>
+    <h4><span th:text="${sample2.value}"></span> proper divisors: <span th:text="${sample2.divsProp}"></span></h4>
+    <h4><span th:text="${sample1.value}"></span> is <span th:text="${sample1.numType}"></span> </h4>
+    <h4><span th:text="${sample2.value}"></span> is <span th:text="${sample2.numType}"></span> </h4>
 </body>
 </html>

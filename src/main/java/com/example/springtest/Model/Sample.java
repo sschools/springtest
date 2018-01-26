@@ -1,26 +1,43 @@
 package com.example.springtest.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sample {
-    private int value1;
-    private int value2;
+    private int value;
+    private int s;
+    private List<Integer> divsProp = new ArrayList<>();
+    private String numType;
 
-    public int getValue1() {
-        return value1;
+    public int getValue() {
+        return value;
     }
 
-    public void setValue1(int value1) {
-        this.value1 = value1;
+    public void setValue(int value) {
+        this.value = value;
     }
 
-    public int getValue2() {
-        return value2;
+    public int getS() {
+        return s;
     }
 
-    public void setValue2(int value2) {
-        this.value2 = value2;
+    public void setS(int s) {
+        this.s = s;
     }
 
-    public int square(int num) {
-        return num*num;
+    public List<Integer> getDivsProp() {
+        return divsProp;
+    }
+
+    public void setDivsProp(List<Integer> divsProp) {
+        this.divsProp = divsProp;
+    }
+
+    public String getNumType() {
+        return numType;
+    }
+
+    public void setNumType(String numType) {
+        this.numType = numType;
     }
 }
