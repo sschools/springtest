@@ -2,6 +2,7 @@ package com.example.springtest.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class FindAbun {
 
@@ -32,6 +33,24 @@ public class FindAbun {
             }
         }
         return res;
+    }
+
+    public int g(int[] pair) {
+        SetVals setVals = new SetVals();
+        Sample one = setVals.res(pair[0]);
+        Sample two = setVals.res(pair[1]);
+        List<Integer> results = new ArrayList<>();
+        List<Integer> oneList = one.getDivsProp();
+        List<Integer> twoList = two.getDivsProp();
+        for (int i = 0; i < oneList.size(); i++) {
+            for (int j = 0; j < twoList.size(); j++) {
+                if (oneList.get(i) == twoList.get(j)) {
+                    results.add(oneList.get(i));
+                }
+            }
+        }
+        int temp = results.get(results.size() - 1);
+        return temp;
     }
 
 }
