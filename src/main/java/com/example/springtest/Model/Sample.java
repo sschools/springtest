@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Sample {
     private int value;
-    private int s;
     private List<Integer> divsProp = new ArrayList<>();
+    private int sumDivs;
     private String numType;
 
     public int getValue() {
@@ -17,20 +17,20 @@ public class Sample {
         this.value = value;
     }
 
-    public int getS() {
-        return s;
-    }
-
-    public void setS(int s) {
-        this.s = s;
-    }
-
     public List<Integer> getDivsProp() {
         return divsProp;
     }
 
     public void setDivsProp(List<Integer> divsProp) {
         this.divsProp = divsProp;
+    }
+
+    public int getSumDivs() {
+        return sumDivs;
+    }
+
+    public void setSumDivs(int sumDivs) {
+        this.sumDivs = sumDivs;
     }
 
     public String getNumType() {

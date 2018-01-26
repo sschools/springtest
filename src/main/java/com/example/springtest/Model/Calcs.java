@@ -6,10 +6,6 @@ import java.util.List;
 
 public class Calcs {
 
-    public int sq(int num) {
-        return num * num;
-    }
-
     public List<Integer> divs(int num) {
         List<Integer> divsList = new ArrayList<>();
         double sr = Math.sqrt((double) num);
@@ -34,12 +30,16 @@ public class Calcs {
         return divsList;
     }
 
-    public String type(int num, List<Integer> divs) {
+    public int divTotal(List<Integer> divs) {
         int total = 0;
-        String res = "";
         for (int i = 0; i < divs.size(); i++) {
             total += divs.get(i);
         }
+        return total;
+    }
+
+    public String type(int num, int total) {
+        String res;
         if (total > num) {
             res = "Abundant";
         } else if (total < num) {

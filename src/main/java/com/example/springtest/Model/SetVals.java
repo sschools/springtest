@@ -5,9 +5,9 @@ public class SetVals {
         Calcs calcs = new Calcs();
         Sample temp = new Sample();
         temp.setValue(num);
-        temp.setS(calcs.sq(num));
         temp.setDivsProp(calcs.divs(num));
-        temp.setNumType(calcs.type(num, temp.getDivsProp()));
+        temp.setSumDivs(calcs.divTotal(temp.getDivsProp()));
+        temp.setNumType(calcs.type(num, temp.getSumDivs()));
         return temp;
     }
 }
