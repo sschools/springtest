@@ -47,8 +47,6 @@ public class FindAbun {
         SetVals setVals = new SetVals();
         Sample one = setVals.res(first);
         Sample two = setVals.res(second);
-        System.out.println("First: " + first);
-        System.out.println("Second: " + second);
         List<Integer> results = new ArrayList<>();
         List<Integer> oneList = one.getDivsProp();
         List<Integer> twoList = two.getDivsProp();
