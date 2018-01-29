@@ -8,7 +8,14 @@
     <h3>Results Page</h3>
     <h4>Amicable Pairs:</h4>
     <p th:each="a: ${amic}">
-        <span th:text="${a[0]}"></span> and <span th:text="${a[1]}"></span> are amicable.
+        <span th:text="${a[0]}"></span> and <span th:text="${a[1]}"></span> are amicable with a gcf of <span th:text="${a[2]}"></span>
+        resulting in M and N of <span th:text="${a[3]}"></span> and <span th:text="${a[4]}"></span> this pair is
+        <span th:if="${a[5]}">
+            <span>exotic.</span>
+        </span>
+        <span th:unless="${a[5]}">
+            <span>regular.</span>
+        </span>
     </p>
 </body>
 </html>

@@ -23,22 +23,32 @@ public class FindAbun {
         SetVals setVals = new SetVals();
         for (int i = 0; i < abun.size(); i++) {
             int current = abun.get(i);
-            int[] tempAr = new int[2];
+            int[] tempAr = new int[6];
             Sample temp = setVals.res(current);
             Sample look = setVals.res(temp.getSumDivs());
             if (look.getSumDivs() == current) {
                 tempAr[0] = current;
                 tempAr[1] = look.getValue();
+                tempAr[2] = g(tempAr[0], tempAr[1]);
+                tempAr[3] = tempAr[0]/tempAr[2];
+                tempAr[4] = tempAr[1]/tempAr[2];
                 res.add(tempAr);
+                if (g(tempAr[2], tempAr[3]) == 1 && g(tempAr[2], tempAr[4]) == 1) {
+                    tempAr[5] = 0;
+                } else {
+                    tempAr[5] = 1;
+                }
             }
         }
         return res;
     }
 
-    public int g(int[] pair) {
+    public int g(int first, int second) {
         SetVals setVals = new SetVals();
-        Sample one = setVals.res(pair[0]);
-        Sample two = setVals.res(pair[1]);
+        Sample one = setVals.res(first);
+        Sample two = setVals.res(second);
+        System.out.println("First: " + first);
+        System.out.println("Second: " + second);
         List<Integer> results = new ArrayList<>();
         List<Integer> oneList = one.getDivsProp();
         List<Integer> twoList = two.getDivsProp();
